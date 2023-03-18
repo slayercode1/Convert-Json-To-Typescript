@@ -92,6 +92,7 @@ button {
   font-size: 16px;
   cursor: pointer;
   transition: 0.3s;
+  margin-left: 50px;
 }
 
 button:hover {
@@ -177,6 +178,12 @@ code {
   padding-inline: 10%;
 }
 
+.flex {
+  display: flex;
+  justify-content: space-between;
+  /* margin: auto; */
+}
+
 .btn-copy {
   background-color: #007bff;
   color: #fff;
@@ -214,7 +221,7 @@ code {
   opacity: 1;
 }
 
-footer{
+footer {
   width: 100%;
   position: absolute;
   bottom: 10px;
@@ -222,15 +229,15 @@ footer{
   color: #fff;
 }
 
-footer > a{
-  text-decoration: none ;
+footer > a {
+  text-decoration: none;
   color: #fff;
   font-size: 18px;
   font-weight: bold;
 }
 
 /* Style pour les écrans de petite taille (mobile) */
-@media screen and (max-width: 767px) {
+@media only screen and (max-width: 767px) {
   /* Appliquer flexbox avec direction de colonne */
 
   h1 {
@@ -281,6 +288,7 @@ footer > a{
     left: 10px;
   }
 }
+
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   /* Ajouter ici les styles CSS pour les tablettes */
