@@ -46,6 +46,7 @@ main {
 
 .prefix {
   margin-left: 10px;
+  font-size: 14px;
 }
 
 h1 {
@@ -69,7 +70,6 @@ form {
 
 label {
   margin-right: 10px;
-  font-size: 16px;
   margin-left: 10px;
   position: absolute;
 }
@@ -252,6 +252,9 @@ footer > a {
   form {
     flex-direction: row;
   }
+  .absolute {
+    top: 15%;
+  }
   .absolute-section-2 > .textarea:first-child {
     display: block;
   }
@@ -327,5 +330,17 @@ footer > a {
   }
   .top {
     top: -20px;
+  }
+}
+
+@media (max-width: 500px) {
+  input[type="text"] {
+    width: 20em;
+  }
+}
+
+@media (max-width: 375px) {
+  input[type="text"] {
+    width: 15em;
   }
 }
