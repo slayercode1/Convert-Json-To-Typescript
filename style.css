@@ -281,3 +281,32 @@ footer > a{
     left: 10px;
   }
 }
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  /* Ajouter ici les styles CSS pour les tablettes */
+  input[type="text"] {
+    width: 13em;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  /* Ajouter ici les styles CSS pour les tablettes */
+  input[type="text"] {
+    width: 19em;
+  }
+}
+
+
+@media only screen and (min-width: 768px) {
+  /* Ajouter ici les styles CSS pour les tablettes */
+  input[type="text"] {
+    width: 10em;
+  }
+}
+
+@media only screen and (max-width: 325px) {
+  /* Ajouter ici les styles CSS pour les tablettes */
+  input[type="text"] {
+    width: 14em;
+  }
+}
