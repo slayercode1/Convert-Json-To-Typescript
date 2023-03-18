@@ -9,7 +9,7 @@ align="center">
 ## **Installation**
 
 ```bash
-git clone 
+git clone https://github.com/slayercode1/Convert-Json-To-Typescript.git
 
 ```
 
