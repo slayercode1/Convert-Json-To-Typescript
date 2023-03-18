@@ -232,8 +232,52 @@ footer > a{
 /* Style pour les écrans de petite taille (mobile) */
 @media screen and (max-width: 767px) {
   /* Appliquer flexbox avec direction de colonne */
+
+  h1 {
+    font-size: 32px;
+  }
+  .absolute {
+    top: 10%;
+    height: 30%;
+  }
+
+  .absolute-section-2 {
+    top: 40%;
+  }
+
+  .absolute-section-2 > .textarea:first-child {
+    display: none;
+  }
+
   section {
     display: flex;
     flex-direction: column;
+  }
+
+  .textarea {
+    width: 100%;
+    margin: 0;
+    padding-top: 40px;
+  }
+
+  code {
+    margin-inline: 10px;
+  }
+
+  form {
+    flex-direction: column;
+  }
+
+  .btn-copy {
+    top: 10%;
+  }
+
+  input[type="text"] {
+    margin: 20px;
+  }
+
+  .top {
+    top: 0px;
+    left: 10px;
   }
 }
