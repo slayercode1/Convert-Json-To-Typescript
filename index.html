@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css">
+  <title>Convert Json to Interface TS</title>
+</head>
+
+<body>
+  <main>
+    <h1>Convert JSON Api to Interface Ts</h1>
+    <div class="toast"></div>
+    <section class="absolute section">
+      <form id="myForm">
+        <div class="relative">
+          <label class="top" for="">Url</label>
+          <input id="url" type="text" placeholder="https://jsonplaceholder.typicode.com/todos/1">
+        </div>
+
+        <div class="relative">
+          <label class="top" for="">Name Interface</label>
+          <input id="nameInterface" type="text" placeholder="Todo">
+        </div>
+
+        <div class="relative">
+          <p class="prefix">Prèfix data:[{}]</p>
+          <label class="switch">
+            <input type="checkbox">
+            <span class="slider"></span>
+          </label>
+        </div>
+
+        <button>Convert</button>
+      </form>
+    </section>
+    <section class="absolute-section-2">
+      <pre class="textarea" style="tab-size: 2;"><code class="language-json" id="fetch">{
+   userId: 1,
+   id: 1,
+   title: "delectus aut autem",
+   completed: false
+}
+      </code></pre>
+      <button class="btn-copy"><ion-icon name="clipboard-outline"></ion-icon> Copier</button>
+      <pre class="textarea" style="tab-size: 2;"><code class="language-typescript" id="result">interface Todo {
+  userId: number;
+  id: number;
+  title: string;
+  completed: boolean;
+}</code></pre>
+    </section>
+
+    <footer>Open-Source <a href="">Github</a></footer>
+  </main>
+
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/ionicons@latest/dist/ionicons.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+  <script>
+    hljs.highlightAll()
+  </script>
+</body>
+
+</html>
