@@ -25,7 +25,7 @@ main {
 
 .absolute {
   position: absolute;
-  top: 15%;
+  top: 10%;
   width: 70%;
 }
 
@@ -34,10 +34,14 @@ main {
 }
 
 .absolute-section-2 {
-  top: 35%;
+  top: 40%;
   position: absolute;
   width: 100%;
   height: calc(100% - 50%);
+}
+
+.absolute-section-2 > .textarea:first-child {
+  display: none;
 }
 
 .prefix {
@@ -47,7 +51,7 @@ main {
 h1 {
   position: absolute;
   top: 5px;
-  font-size: 36px;
+  font-size: 4vw;
   font-weight: bold;
   text-align: center;
   color: #fff;
@@ -57,7 +61,7 @@ h1 {
 
 form {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: space-around;
   width: 100%;
@@ -76,10 +80,11 @@ input[type="text"] {
   border: none;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
   width: 25em;
+  margin-block: 10px;
 }
 
 .top {
-  top: -20px;
+  top: -8px;
   left: -10px;
 }
 
@@ -236,85 +241,91 @@ footer > a {
   font-weight: bold;
 }
 
-/* Style pour les écrans de petite taille (mobile) */
-@media only screen and (max-width: 767px) {
-  /* Appliquer flexbox avec direction de colonne */
+@media (min-width: 640px) {
+  input[type="text"] {
+    width: 90%;
+    margin-block: 0;
+  }
+  button {
+    margin-left: 10px;
+  }
+  form {
+    flex-direction: row;
+  }
+  .absolute-section-2 > .textarea:first-child {
+    display: block;
+  }
+  .absolute-section-2 {
+    top: 35%;
+  }
+  .top {
+    top: -20px;
+  }
+}
 
-  h1 {
-    font-size: 32px;
+@media (min-width: 768px) {
+  input[type="text"] {
+    width: 90%;
+    margin-block: 0;
+  }
+  form {
+    flex-direction: row;
   }
   .absolute {
-    top: 10%;
-    height: 30%;
+    top: 15%;
   }
-
-  .absolute-section-2 {
-    top: 40%;
-  }
-
   .absolute-section-2 > .textarea:first-child {
-    display: none;
+    display: block;
   }
-
-  section {
-    display: flex;
-    flex-direction: column;
+  .absolute-section-2 {
+    top: 35%;
   }
-
-  .textarea {
-    width: 100%;
-    margin: 0;
-    padding-top: 40px;
+  .top {
+    top: -20px;
   }
+}
 
-  code {
-    margin-inline: 10px;
+@media (min-width: 1024px) {
+  input[type="text"] {
+    width: auto;
+    margin-block: 0;
+  }
+  form {
+    flex-direction: row;
+  }
+  .absolute {
+    top: 15%;
+  }
+  .absolute-section-2 > .textarea:first-child {
+    display: block;
+  }
+  .absolute-section-2 {
+    top: 35%;
+  }
+  .top {
+    top: -20px;
+  }
+}
+
+@media (min-width: 1280px) {
+  input[type="text"] {
+    width: 25em;
+    margin-block: 0;
   }
 
   form {
-    flex-direction: column;
+    flex-direction: row;
   }
-
-  .btn-copy {
-    top: 10%;
+  .absolute {
+    top: 15%;
   }
-
-  input[type="text"] {
-    margin: 20px;
+  .absolute-section-2 > .textarea:first-child {
+    display: block;
   }
-
+  .absolute-section-2 {
+    top: 35%;
+  }
   .top {
-    top: 0px;
-    left: 10px;
-  }
-}
-
-
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
-  /* Ajouter ici les styles CSS pour les tablettes */
-  input[type="text"] {
-    width: 13em;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  /* Ajouter ici les styles CSS pour les tablettes */
-  input[type="text"] {
-    width: 19em;
-  }
-}
-
-
-@media only screen and (min-width: 768px) {
-  /* Ajouter ici les styles CSS pour les tablettes */
-  input[type="text"] {
-    width: 10em;
-  }
-}
-
-@media only screen and (max-width: 325px) {
-  /* Ajouter ici les styles CSS pour les tablettes */
-  input[type="text"] {
-    width: 14em;
+    top: -20px;
   }
 }
