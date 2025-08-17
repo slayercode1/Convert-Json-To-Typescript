@@ -6,58 +6,113 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-light.min.css">
   <title>Convert Json to Interface TS</title>
 </head>
 
 <body>
+  <!-- Header simplifié -->
+  <header class="saas-header">
+    <div class="header-container">
+      <div class="logo">
+        <span class="logo-icon">🔧</span>
+        <span class="logo-text">JSON2TS</span>
+      </div>
+      <nav class="header-nav">
+        <a href="https://github.com/slayercode1/Convert-Json-To-Typescript" class="nav-link" target="_blank">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
   <main>
-    <h1>Convert JSON Api to Interface Ts</h1>
     <div class="toast"></div>
-    <section class="absolute section">
+    
+    <section class="absolute section animate-in">
       <form id="myForm">
         <div class="relative">
-          <label class="top" for="">Url</label>
-          <input id="url" type="text" placeholder="https://jsonplaceholder.typicode.com/todos/1">
+          <label class="top" for="url">API URL</label>
+          <input id="url" type="text" placeholder="https://jsonplaceholder.typicode.com/todos/1" required>
         </div>
 
         <div class="relative">
-          <label class="top" for="">Name Interface</label>
-          <input id="nameInterface" type="text" placeholder="Todo">
+          <label class="top" for="nameInterface">Interface Name</label>
+          <input id="nameInterface" type="text" placeholder="Todo" required>
         </div>
 
         <div class="flex">
-            <div class="relative">
-              <p class="prefix">data:[{}]</p>
-              <label class="switch">
-                <input type="checkbox">
-                <span class="slider"></span>
-              </label>
-            </div>
-            
-            <button>Convert</button>
+          <div class="relative">
+            <span class="prefix">Unwrap data:[{}]</span>
+            <label class="switch">
+              <input type="checkbox">
+              <span class="slider"></span>
+            </label>
+          </div>
+          
+          <button type="submit">
+            <span class="button-text">Convert</span>
+            <span class="button-loader" style="display: none;">⟳</span>
+          </button>
         </div>
       </form>
     </section>
+    
     <section class="absolute-section-2">
-      <pre class="textarea" style="tab-size: 2;"><code class="language-json" id="fetch">{
-   userId: 1,
-   id: 1,
-   title: "delectus aut autem",
-   completed: false
-}
-      </code></pre>
-      <button class="btn-copy"><ion-icon name="clipboard-outline"></ion-icon> Copier</button>
-      <pre class="textarea" style="tab-size: 2;"><code class="language-typescript" id="result">interface Todo {
+      <div class="textarea animate-in">
+        <h3>JSON Response</h3>
+        <code class="language-json" id="fetch">{
+  "userId": 1,
+  "id": 1,
+  "title": "delectus aut autem",
+  "completed": false
+}</code>
+      </div>
+      
+      <div class="textarea animate-in">
+        <h3>TypeScript Interface</h3>
+        <button class="btn-copy"><ion-icon name="clipboard-outline"></ion-icon> Copy</button>
+        <code class="language-typescript" id="result">interface Todo {
   userId: number;
   id: number;
   title: string;
   completed: boolean;
-}</code></pre>
+}</code>
+      </div>
     </section>
 
-    <footer>Open-Source <a href="https://github.com/slayercode1/Convert-Json-To-Typescript">Github</a></footer>
   </main>
+
+  <!-- Footer amélioré -->
+  <footer class="improved-footer">
+    <div class="footer-container">
+      <div class="footer-content">
+        <div class="footer-left">
+          <div class="footer-logo">
+            <span class="logo-icon">🔧</span>
+            <span class="logo-text">JSON2TS</span>
+          </div>
+          <p class="footer-tagline">Transform JSON API Responses into TypeScript Interfaces</p>
+        </div>
+        
+        <div class="footer-right">
+          <a href="https://github.com/slayercode1/Convert-Json-To-Typescript" target="_blank" class="github-link">
+            <ion-icon name="logo-github"></ion-icon>
+            <span>View on GitHub</span>
+          </a>
+        </div>
+      </div>
+      
+      <div class="footer-divider"></div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2024 JSON2TS. Open-Source Project.</p>
+        <div class="footer-badges">
+          <span class="badge">TypeScript</span>
+          <span class="badge">JSON</span>
+          <span class="badge">Developer Tools</span>
+        </div>
+      </div>
+    </div>
+  </footer>
 
   <script src="script.js"></script>
   <script src="https://unpkg.com/ionicons@latest/dist/ionicons.js"></script>
